@@ -1,0 +1,52 @@
+import java.util.Scanner;
+public class NumberGuessingGame{
+ public static void main(String args[]){
+  Scanner input= new Scanner(System.in);
+  int attempt=1;
+  int guess=0,score=0;
+  int value=(int)(Math.random()*101);
+  System.out.println("\t*********************************");
+  System.out.println("\t!Welcome to Number Guessing Game! ");
+  System.out.println("\t*********************************");
+  System.out.println(" Guess a Number between 1 to 100");
+  System.out.println(" You have 10 Attempts to Guess ");
+  System.out.println(" Let's Start...! ");
+  while(true)
+  {
+   if(input.hasNextInt())
+   {
+    guess=input.nextInt();
+    if(guess==value)
+    {
+     score=score+10;
+     System.out.println("Congratulations!!! You won the Game");
+     System.out.println("Your Score is "+score+" and you guessed it in "+attempt+" attempts");
+     break;
+    }
+    else if(guess<value)
+    {
+     System.out.println("Your Guess is smaller than the value");
+     System.out.println("Attempts remaining : "+(10-attempt));
+     score--;
+    }
+    else if(guess>value)
+    {
+     System.out.println("Your Guess is greater than the value");
+     System.out.println("Attempts remaining : "+(10-attempt));
+     score--;
+    }
+    if (attempt==10)
+    {
+     System.out.println("You have exceeded the maximum number of attempts.");
+     System.out.println("Better Luck Next Time");
+     break;
+    }
+    attempt++;
+   }
+   else
+   {
+    System.out.println("Enter a Valid Number!!!");
+   }
+  }
+ }
+}
