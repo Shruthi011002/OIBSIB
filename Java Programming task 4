@@ -1,0 +1,160 @@
+//Online Examination 
+
+import java.util.Scanner;
+public class Online_Examination{
+ public static void main(String[] args){
+ int ch=0,c=0;
+ int choice;
+ String name;
+ Scanner sc=new Scanner(System.in);
+ System.out.println("\nEnter Username: ");
+ name=sc.next();
+ int count=0;
+ System.out.println("\n..Oasis Infobyte Online Examination..");
+ System.out.println("\n......Welcome "+name+"......");
+ do{
+  System.out.println("\n1.Take Exam");
+  System.out.println("2.View Marks");
+  System.out.println("3.Exit");
+  System.out.println("Enter your choice: ");
+  ch = sc.nextInt();
+  if(ch==3)
+  {
+   System.out.println("**Thankyou**");
+   break;
+  }
+  switch(ch)
+  {
+   case 1:
+   {
+    c=1;
+    System.out.println("The examination contains 5 questions, the questions are based on India and each question carries 1 mark.\nOptions are provided \n..No Negative marks for wrong answers..");
+    System.out.println("Select the Subject: ");
+    System.out.println("\n1.Geography \n2.History");
+    System.out.println("Enter your choice: ");
+    int sub=sc.nextInt();
+    if(sub==1){
+     count=0;
+     System.out.println("\nIndia has how many seismic zones?");
+     System.out.println("1. 2 \n2. 3 \n3. 4 \n4. 5");
+     System.out.print("Enter answer: ");
+     choice=sc.nextInt();
+     if (choice==3){
+       ++count;
+     }
+     else{
+      System.out.println("Wrong Answer...! \nThe answer is option 3");
+     }
+     System.out.println("\nWhich of the following state doesnot share boundary with Myanmar?");
+     System.out.println("1. Assam \n2. Arunachal Pradesh \n3. Nagaland \n4. Manipur");
+     System.out.print("Enter answer: ");
+     choice=sc.nextInt();
+     if (choice==1){
+       ++count;
+     }
+     else{
+      System.out.println("Wrong Answer...! \nThe answer is option 1");
+     }
+     System.out.println("\nWhich among the following is a typical Monsoon vegetation in India?");
+     System.out.println("1. Tropical Evergreen Forests \n2. Tropical Deciduous Forest \n3. Tropical Thron Forests \n4. Sub Tropical Evergreen Forrests");
+     System.out.print("Enter answer: ");
+     choice=sc.nextInt();
+     if (choice==2){
+       ++count;
+     }
+     else{
+      System.out.println("Wrong Answer...! \nThe answer is option 2");
+     }
+     System.out.println("\nWhich among the following Gulfs is/are noted for the extreme rise and fall of its tides, making it ideal location for Tidal energy?");
+     System.out.println("1. Gulf of Mannar \n2. gulf of Khambat \n3. Gulf of Kutch \n4. Both 2 and 3");
+     System.out.print("Enter answer: ");
+     choice=sc.nextInt();
+     if (choice==4){
+       ++count;
+     }
+     else{
+      System.out.println("Wrong Answer...! \nThe answer is option 4");
+     }
+     System.out.println("\nWhich among the following was the first port in India to be a Public Company?");
+     System.out.println("1. Ennore Port \n2. Tuticorin Port \n3. New Manglore Port \n4. Mormugao Port");
+     System.out.print("Enter answer: ");
+     choice=sc.nextInt();
+     if (choice==1){
+       ++count;
+     }
+     else{
+      System.out.println("Wrong Answer...! \nThe answer is option 1");
+     }
+    }
+    else
+    {
+     count=0;
+     System.out.println("\nWhen was Goa captured by portuguese?");
+     System.out.println("1. 1479 AD \n2. 1575 AD \n3. 1510 AD \n4. 1600 AD");
+     System.out.print("Enter answer: ");
+     choice=sc.nextInt();
+     if (choice==3){
+       ++count;
+     }
+     else{
+      System.out.println("Wrong Answer...! \nThe answer is option 3");
+     }
+     System.out.println("\nThe Battle of Plassey was fought in ");
+     System.out.println("1. 1764 \n2. 1748 \n3. 1782 \n4. 1757");
+     System.out.print("Enter answer: ");
+     choice=sc.nextInt();
+     if (choice==4){
+       ++count;
+     }
+     else{
+      System.out.println("Wrong Answer...! \nThe answer is option 4");
+     }
+     System.out.println("\nWhich pillar edict of Asoka is longest of all pillars?");
+     System.out.println("1. 2nd \n2. 5th \n3. 6th \n4. 7th");
+     System.out.print("Enter answer: ");
+     choice=sc.nextInt();
+     if (choice==4){
+       ++count;
+     }
+     else{
+      System.out.println("Wrong Answer...! \nThe answer is option 4");
+     }
+     System.out.println("\nIn which year The Rowlatt Act was passed?");
+     System.out.println("1. 1905 \n2. 1913 \n3. 1919 \n4. 1925");
+     System.out.print("Enter answer: ");
+     choice=sc.nextInt();
+     if (choice==3){
+       ++count;
+     }
+     else{
+      System.out.println("Wrong Answer...! \nThe answer is option 3");
+     }
+     System.out.println("\nIn 1918, Mahatma Gandhi Launched The Kheda Satyagrah in Gujarat in support of ?");
+     System.out.println("1. Mill Owners \n2. Land Lords \n3. The Peasants \n4. Koi Rebellion");
+     System.out.print("Enter answer: ");
+     choice=sc.nextInt();
+     if (choice==3){
+       ++count;
+     }
+     else{
+      System.out.println("Wrong Answer...! \nThe answer is option 3");
+     }
+    }
+    break;
+   }
+   case 2:
+    {
+     if (c==0){
+      System.out.println("\nYou have not yet attended the exam...!");
+     }
+     else if(count>=3){
+      System.out.println("\nCongrats "+name+" You scored "+count+ " marks out of 5." );
+     }
+     else{
+      System.out.println("\nYou scored "+count+ " marks out of 5. Don't worry "+name+" **Practice makes a man Perfect**");
+     }
+    }
+   }
+  }while(true);
+ }
+}
